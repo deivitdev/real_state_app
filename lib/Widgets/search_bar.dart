@@ -10,15 +10,20 @@ class SearchBar extends StatelessWidget {
     return SizedBox(
       // color: Colors.red,
       width: double.infinity,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: const [
-          Text(
-            'Search you dream house',
-            style: TextStyle(color: Colors.black26, fontSize: 20),
+      child: Card(
+        child: Padding(
+          padding: const EdgeInsets.all(12.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: const [
+              Text(
+                'Search you dream house',
+                style: TextStyle(color: Colors.black26, fontSize: 20),
+              ),
+              Icon(Icons.search)
+            ],
           ),
-          Icon(Icons.search)
-        ],
+        ),
       ),
     );
   }

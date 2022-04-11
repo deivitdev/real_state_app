@@ -8,7 +8,6 @@ class MainCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 0,
       child: Padding(
         padding: const EdgeInsets.only(bottom: 30, top: 20),
         child: Column(
@@ -82,26 +81,28 @@ class ImagePrice extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 10),
-      child: Stack(
-        children: [
-          const Image(
-            image: AssetImage('assets/house.jpg'),
-          ),
-          Container(
-            margin: const EdgeInsets.only(left: 10, top: 10),
-            alignment: Alignment.center,
-            height: 60,
-            width: 100,
-            color: Colors.orange,
-            child: const Center(
-              child: Text(
-                "\$340 /Month",
-                textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.white),
-              ),
+      child: Card(
+        child: Stack(
+          children: [
+            const Image(
+              image: AssetImage('assets/house.jpg'),
             ),
-          )
-        ],
+            Container(
+              margin: const EdgeInsets.only(left: 10, top: 10),
+              alignment: Alignment.center,
+              height: 60,
+              width: 100,
+              color: Colors.orange,
+              child: const Center(
+                child: Text(
+                  "\$340 /Month",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
